@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)https://pg19.us/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style data-merge-styles="true"></style>
+    <style data-merge-styles="true"></style><style data-merge-styles="true"></style>
+    <!-- 设置页面适配移动设备 -->
+    <meta name="applicable-device" content="mobile">
+    
+    <meta content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <!-- 启用全屏模式 -->
+    <meta content="true" name="full-screen">
+    <meta content="true" name="x5-fullscreen">
+    <meta content="true" name="360-fullscreen">
+    <!-- 针对 iPhone QQ 的设置 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <title>模拟器</title>
+    <!-- 设置页面视口宽度 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- 设置苹果移动端网页是否全屏显示 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 引入jQuery等库文件 -->
+    <script src="./模拟器_files/jquery.js.下载"></script>
+    <script src="./模拟器_files/jquery.lazyload.js.下载"></script>
+    <script src="./模拟器_files/layer.js.下载"></script><link rel="stylesheet" href="./模拟器_files/layer.css" id="layuicss-layer">
+    <script src="./模拟器_files/cookie.js.下载"></script>
+    <script src="./模拟器_files/sdk_core.js.下载"></script>
+
+    <!-- 引入CSS样式文件 -->
+    <link rel="shortcut icon" href="https://pg19.us/favicon.ico">
+    <link rel="stylesheet" href="./模拟器_files/mainnew.css">
+    <link rel="stylesheet" href="./模拟器_files/main2.css">
+    <link rel="stylesheet" href="./模拟器_files/animations.css">
+    <!-- 设置layer样式 -->
+    <script>layer.config({ skin: 'dialogs' });</script>
+
+    <!-- 自定义样式 -->
+    <style>
+        /* 设置视频样式 */
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        /* 设置搜索样式 */
+        .search {
+            padding: 5px;
+        }
+
+        .search .sear_input {
+            width: 220px;
+            height: 33px;
+            border: 1px #ccc solid;
+            border-radius: 4px;
+            font-size: 14px;
+            padding-left: 8px;
+            vertical-align: middle;
+            box-sizing: border-box;
+            -webkit-border-radius: 12px;
+            border-radius: 12px;
+        }
+
+        .search .btn_input {
+            position: absolute;
+            right: 10px;
+            top: 3px;
+            width: 30px;
+            height: 30px;
+            margin: 4px 0 0 150px;
+            display: block;
+            border: none;
+            background: #fff url(/Public/static/image/searchbg.png) 5px no-repeat;
+            background-size: 18px;
+            cursor: pointer;
+            -webkit-border-radius: 12px;
+            border-radius: 12px;
+        }
+
+        /* 设置页面标题样式 */
+        .h5-title[data-v-224c70c0] {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 5px 0 5px;
+        }
+
+        .h5-title img[data-v-224c70c0] {
+            display: inline-block;
+            width: 12px;
+            vertical-align: middle;
+        }
+
+        .h5-title span[data-v-224c70c0] {
+            display: inline-block;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        .h5-title img[data-v-224c70c0] {
+            display: inline-block;
+            width: 12px;
+            vertical-align: middle;
+        }
+
+        /* 设置福利列表样式 */
+        .welfare-list[data-v-25e1d289] {
+            width: auto;
+            overflow-x: auto;
+            padding: 0px 10px 5px;
+            text-align: center;
+        }
+
+        .box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .welfare-list .welfare-item[data-v-25e1d289] {
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            margin-right: 10px;
+            width: 75x;
+        }
+
+        /* 设置垂直应用样式 */
+        .app-vertical[data-v-d077d592] {
+            text-align: center;
+        }
+
+        .app-vertical .icon[data-v-d077d592] {
+            width: 70px;
+            margin: 0 auto;
+        }
+
+        .icon {
+            text-decoration: none;
+            border-bottom: none;
+            position: relative;
+        }
+
+        .icon img {
+            width: 100%;
+        }
+
+        .app-vertical .name[data-v-d077d592] {
+            margin: 5px 0;
+        }
+
+        /* 设置隐藏文本样式 */
+        .hide-text.one,
+        .hide-text.two {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+
+        .hide-text.one {
+            -webkit-line-clamp: 1;
+        }
+
+        .hide-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* 设置标签样式 */
+        .app-vertical .label[data-v-d077d592] {
+            font-size: 10px;
+            border-top-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            color: #fff;
+            background: -webkit-gradient(linear, left top, right top, from(#ff4842), to(#ff7d5e));
+            background: linear-gradient(left, #ff4842, #ff7d5e);
+            padding: 2.5px 0;
+        }
+
+        /* 公告样式 */
+        @font-face {
+            font-family: "iconfont";
+            src: url("//at.alicdn.com/t/font_2516453_g6qjhhqblt9.woff2?t=1620545333370") format("woff2"),
+                url("//at.alicdn.com/t/font_2516453_g6qjhhqblt9.woff?t=1620545333370") format("woff"),
+                url("//at.alicdn.com/t/font_2516453_g6qjhhqblt9.ttf?t=1620545333370") format("truetype");
+        }
+
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .ad {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            box-sizing: border-box;
+            padding: 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 20px;
+            color: #353535;
+            margin: 10px auto;
+
+            i {
+                color: #ff6146;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+
+            .ad .content {
+                width: 100%;
+                overflow: hidden;
+                text-align: right;
+            }
+
+            .ad .content span {
+                display: inline-block;
+                white-space: nowrap;
+                animation: marquee 30s linear infinite;
+                animation-delay: 1s;
+                transform: translateX(100%);
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+
+            .content {
+                span {
+                    animation: marquee 30s linear infinite;
+                }
+            }
+        }
+
+        #search-newbtn {
+            border: none;
+            border-radius: 10px;
+            display: block;
+            width: calc(100% - 30px);
+            margin: 10px 15px;
+            height: 40px;
+            background: #E91E63;
+            color: #fff;
+            text-align: center;
+
+        }
+    </style>
+
+    <!-- 51.la -->
+    <script charset="UTF-8" id="LA_COLLECT" src="./模拟器_files/js-sdk-pro.min.js.下载"></script>
+    <script>LA.init({id:"3Mbeug3WkPEoBsyr",ck:"3Mbeug3WkPEoBsyr"})</script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <!-- 轮播图 -->
+            <div class="banner" id="slides" style="overflow: hidden;">
+                            </div>
+
+            <!-- 广告栏 -->
+            <div class="ad">
+                <i class="iconfont"></i>&nbsp;
+                <p class="content" style="width: 100%; text-align: right;">
+                    <span>
+                        <!-- 滚动公告 -->
+                        <marquee direction="left" style="width: 100%;">推荐平台账单无忧 百万秒下</marquee>
+                    </span>
+                </p>
+            </div>
+
+            <div class="search-new">
+                <input type="text" name="" id="search-newinp" value="" placeholder="请输入软件名称搜索" spellcheck="false" data-ms-editor="true">
+                <button type="button" id="search-newbtn">搜索</button>
+            </div>
+
+            <!-- 导航 -->
+            <div class="nav">
+                <ul id="tab">
+                    <!-- 标签项 -->
+                    <li class="tab active"><a href="javascript:;" style="font-size: 90%;color: #E91E63;line-height: 2.5rem;">推荐软件</a></li>
+                    <li class="tab"><a href="javascript:;" style="font-size: 90%;color: #E91E63;line-height: 2.5rem;">全部软件</a></li>
+                    <li class="tab"><a href="javascript:;" style="font-size: 90%;color: #E91E63;line-height: 2.5rem;">精品软件</a></li>
+                    <!--<li class="tab"><a href="javascript:;"
+                            style="font-size: 90%;color: #E91E63;line-height: 2.5rem;">推荐视频</a></li>-->
+                </ul>
+            </div>
+
+            <!-- 推荐软件 -->
+            <div class="gamelist tab_cont">
+                <div class="item">
+                        <a class="part1 icon" href="https://bakmry.gziasti.com/app/register.php?site_id=1051&topId=243913">
+                            <img class="lazy" src="./模拟器_files/68578ec7eae27.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://bakmry.gziasti.com/app/register.php?site_id=1051&topId=243913">
+                            <h3 class="titles">TOP1娱乐新用户电子大水</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://bakmry.gziasti.com/app/register.php?site_id=1051&topId=243913" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://tz.wx-nsltxf14.com/app/register.php?site_id=114615250&topId=64390">
+                            <img class="lazy" src="./模拟器_files/685691b257916.jpg">
+                        </a>
+                        <a class="part2 text" href="https://tz.wx-nsltxf14.com/app/register.php?site_id=114615250&topId=64390">
+                            <h3 class="titles">uu国际100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://tz.wx-nsltxf14.com/app/register.php?site_id=114615250&topId=64390" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://kiewni.gziasti.com/app/register.php?site_id=800&topId=10325991">
+                            <img class="lazy" src="./模拟器_files/6856bba1cd193.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://kiewni.gziasti.com/app/register.php?site_id=800&topId=10325991">
+                            <h3 class="titles">壹号娱乐100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://kiewni.gziasti.com/app/register.php?site_id=800&topId=10325991" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://bakmry.gziasti.com/app/register.php?site_id=1050&topId=368262&selfPlanId=276232">
+                            <img class="lazy" src="./模拟器_files/6833a8eb76a05.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://bakmry.gziasti.com/app/register.php?site_id=1050&topId=368262&selfPlanId=276232">
+                            <h3 class="titles">南宫旗下非凡娱乐100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水新用户送88</span>
+                            </h3>
+                        </a>
+                        <a href="https://bakmry.gziasti.com/app/register.php?site_id=1050&topId=368262&selfPlanId=276232" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://pkajim.hfjcl.com/app/register.php?site_id=1031&topId=34130">
+                            <img class="lazy" src="./模拟器_files/6830efef45f4b.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://pkajim.hfjcl.com/app/register.php?site_id=1031&topId=34130">
+                            <h3 class="titles">南宫旗下征途国际100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水注册送88 新用户100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://pkajim.hfjcl.com/app/register.php?site_id=1031&topId=34130" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://kiewni.gziasti.com/app/register.php?site_id=1030&topId=51722">
+                            <img class="lazy" src="./模拟器_files/684dfabf1ab36.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://kiewni.gziasti.com/app/register.php?site_id=1030&topId=51722">
+                            <h3 class="titles">巅峰国际100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水注册送88100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://kiewni.gziasti.com/app/register.php?site_id=1030&topId=51722" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://pkajim.hfjcl.com/app/register.php?site_id=1032&topId=24462">
+                            <img class="lazy" src="./模拟器_files/6856bbd2b1b96.png">
+                        </a>
+                        <a class="part2 text" href="https://pkajim.hfjcl.com/app/register.php?site_id=1032&topId=24462">
+                            <h3 class="titles">超凡娱乐100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户首选电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://pkajim.hfjcl.com/app/register.php?site_id=1032&topId=24462" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://156.234.1.137:55003/#/link?allwin=cpsgj9DPdQOvzC%2FkouT92A%3D%3D">
+                            <img class="lazy" src="./模拟器_files/671e44df4fb15.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://156.234.1.137:55003/#/link?allwin=cpsgj9DPdQOvzC%2FkouT92A%3D%3D">
+                            <h3 class="titles">28圈注册送28</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户注册送28电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://156.234.1.137:55003/#/link?allwin=cpsgj9DPdQOvzC%2FkouT92A%3D%3D" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://tz.wx-gujdtq3.com/app/register.php?site_id=2228&topId=974127">
+                            <img class="lazy" src="./模拟器_files/671e44c1d502d.jpg">
+                        </a>
+                        <a class="part2 text" href="https://tz.wx-gujdtq3.com/app/register.php?site_id=2228&topId=974127">
+                            <h3 class="titles">大满贯100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://tz.wx-gujdtq3.com/app/register.php?site_id=2228&topId=974127" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://onkrcy.hefaship.com/app/register.php?site_id=1020&topId=24428527">
+                            <img class="lazy" src="./模拟器_files/684dfa6cd1ea8.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://onkrcy.hefaship.com/app/register.php?site_id=1020&topId=24428527">
+                            <h3 class="titles">问鼎娱乐100+1000</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://onkrcy.hefaship.com/app/register.php?site_id=1020&topId=24428527" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1021&topId=4927847">
+                            <img class="lazy" src="./模拟器_files/671e446ed3541.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1021&topId=4927847">
+                            <h3 class="titles">多多娱乐100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1021&topId=4927847" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://nvjmce.hfjcl.com/app/register.php?site_id=1019&topId=8069838">
+                            <img class="lazy" src="./模拟器_files/684dfa7e84d3e.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://nvjmce.hfjcl.com/app/register.php?site_id=1019&topId=8069838">
+                            <h3 class="titles">NG体育100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户首选电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://nvjmce.hfjcl.com/app/register.php?site_id=1019&topId=8069838" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://xjvueb.hefaship.com/app/register.php?site_id=1010&topId=3113400">
+                            <img class="lazy" src="./模拟器_files/671e442302d0c.jpg">
+                        </a>
+                        <a class="part2 text" href="https://xjvueb.hefaship.com/app/register.php?site_id=1010&topId=3113400">
+                            <h3 class="titles">赏金国家全新升级100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://xjvueb.hefaship.com/app/register.php?site_id=1010&topId=3113400" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="http://yhyl.xyz/">
+                            <img class="lazy" src="./模拟器_files/671e437119bbc.jpeg">
+                        </a>
+                        <a class="part2 text" href="http://yhyl.xyz/">
+                            <h3 class="titles">PG电子模拟器</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt"></span>
+                            </h3>
+                        </a>
+                        <a href="http://yhyl.xyz/" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1012&topId=2671794">
+                            <img class="lazy" src="./模拟器_files/67a9339b56687.png">
+                        </a>
+                        <a class="part2 text" href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1012&topId=2671794">
+                            <h3 class="titles">旺财28100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户首选电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1012&topId=2671794" class="button1 small3">下载</a>
+                    </div>                <!-- 点我返回顶部链接 -->
+                <p class="loadmore" style="font-size: 1rem;"><a href="javascript:scroll(0,0)">点我返回顶部</a></p>
+            </div>
+
+            <!-- 精品软件 -->
+            <div class="gamelist tab_cont" style="display:none;">
+                  <div class="item">
+                        <a class="part1 icon" href="https://bakmry.gziasti.com/app/register.php?site_id=1051&topId=243913">
+                            <img class="lazy" src="./模拟器_files/68578ec7eae27.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://bakmry.gziasti.com/app/register.php?site_id=1051&topId=243913">
+                            <h3 class="titles">TOP1娱乐新用户电子大水</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://bakmry.gziasti.com/app/register.php?site_id=1051&topId=243913" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://tz.wx-nsltxf14.com/app/register.php?site_id=114615250&topId=64390">
+                            <img class="lazy" src="./模拟器_files/685691b257916.jpg">
+                        </a>
+                        <a class="part2 text" href="https://tz.wx-nsltxf14.com/app/register.php?site_id=114615250&topId=64390">
+                            <h3 class="titles">uu国际100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://tz.wx-nsltxf14.com/app/register.php?site_id=114615250&topId=64390" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://kiewni.gziasti.com/app/register.php?site_id=800&topId=10325991">
+                            <img class="lazy" src="./模拟器_files/6856bba1cd193.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://kiewni.gziasti.com/app/register.php?site_id=800&topId=10325991">
+                            <h3 class="titles">壹号娱乐100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://kiewni.gziasti.com/app/register.php?site_id=800&topId=10325991" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://bakmry.gziasti.com/app/register.php?site_id=1050&topId=368262&selfPlanId=276232">
+                            <img class="lazy" src="./模拟器_files/6833a8eb76a05.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://bakmry.gziasti.com/app/register.php?site_id=1050&topId=368262&selfPlanId=276232">
+                            <h3 class="titles">南宫旗下非凡娱乐100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水新用户送88</span>
+                            </h3>
+                        </a>
+                        <a href="https://bakmry.gziasti.com/app/register.php?site_id=1050&topId=368262&selfPlanId=276232" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://pkajim.hfjcl.com/app/register.php?site_id=1031&topId=34130">
+                            <img class="lazy" src="./模拟器_files/6830efef45f4b.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://pkajim.hfjcl.com/app/register.php?site_id=1031&topId=34130">
+                            <h3 class="titles">南宫旗下征途国际100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水注册送88 新用户100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://pkajim.hfjcl.com/app/register.php?site_id=1031&topId=34130" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://kiewni.gziasti.com/app/register.php?site_id=1030&topId=51722">
+                            <img class="lazy" src="./模拟器_files/684dfabf1ab36.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://kiewni.gziasti.com/app/register.php?site_id=1030&topId=51722">
+                            <h3 class="titles">巅峰国际100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水注册送88100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://kiewni.gziasti.com/app/register.php?site_id=1030&topId=51722" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://pkajim.hfjcl.com/app/register.php?site_id=1032&topId=24462">
+                            <img class="lazy" src="./模拟器_files/6856bbd2b1b96.png">
+                        </a>
+                        <a class="part2 text" href="https://pkajim.hfjcl.com/app/register.php?site_id=1032&topId=24462">
+                            <h3 class="titles">超凡娱乐100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户首选电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://pkajim.hfjcl.com/app/register.php?site_id=1032&topId=24462" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://156.234.1.137:55003/#/link?allwin=cpsgj9DPdQOvzC%2FkouT92A%3D%3D">
+                            <img class="lazy" src="./模拟器_files/671e44df4fb15.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://156.234.1.137:55003/#/link?allwin=cpsgj9DPdQOvzC%2FkouT92A%3D%3D">
+                            <h3 class="titles">28圈注册送28</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户注册送28电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://156.234.1.137:55003/#/link?allwin=cpsgj9DPdQOvzC%2FkouT92A%3D%3D" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://tz.wx-gujdtq3.com/app/register.php?site_id=2228&topId=974127">
+                            <img class="lazy" src="./模拟器_files/671e44c1d502d.jpg">
+                        </a>
+                        <a class="part2 text" href="https://tz.wx-gujdtq3.com/app/register.php?site_id=2228&topId=974127">
+                            <h3 class="titles">大满贯100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://tz.wx-gujdtq3.com/app/register.php?site_id=2228&topId=974127" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://onkrcy.hefaship.com/app/register.php?site_id=1020&topId=24428527">
+                            <img class="lazy" src="./模拟器_files/684dfa6cd1ea8.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://onkrcy.hefaship.com/app/register.php?site_id=1020&topId=24428527">
+                            <h3 class="titles">问鼎娱乐100+1000</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://onkrcy.hefaship.com/app/register.php?site_id=1020&topId=24428527" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1021&topId=4927847">
+                            <img class="lazy" src="./模拟器_files/671e446ed3541.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1021&topId=4927847">
+                            <h3 class="titles">多多娱乐100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1021&topId=4927847" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://nvjmce.hfjcl.com/app/register.php?site_id=1019&topId=8069838">
+                            <img class="lazy" src="./模拟器_files/684dfa7e84d3e.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://nvjmce.hfjcl.com/app/register.php?site_id=1019&topId=8069838">
+                            <h3 class="titles">NG体育100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户首选电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://nvjmce.hfjcl.com/app/register.php?site_id=1019&topId=8069838" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://xjvueb.hefaship.com/app/register.php?site_id=1010&topId=3113400">
+                            <img class="lazy" src="./模拟器_files/671e442302d0c.jpg">
+                        </a>
+                        <a class="part2 text" href="https://xjvueb.hefaship.com/app/register.php?site_id=1010&topId=3113400">
+                            <h3 class="titles">赏金国家全新升级100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://xjvueb.hefaship.com/app/register.php?site_id=1010&topId=3113400" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="http://yhyl.xyz/">
+                            <img class="lazy" src="./模拟器_files/671e437119bbc.jpeg">
+                        </a>
+                        <a class="part2 text" href="http://yhyl.xyz/">
+                            <h3 class="titles">PG电子模拟器</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt"></span>
+                            </h3>
+                        </a>
+                        <a href="http://yhyl.xyz/" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1012&topId=2671794">
+                            <img class="lazy" src="./模拟器_files/67a9339b56687.png">
+                        </a>
+                        <a class="part2 text" href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1012&topId=2671794">
+                            <h3 class="titles">旺财28100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户首选电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1012&topId=2671794" class="button1 small3">下载</a>
+
+                    </div>                <!-- 点我返回顶部链接 -->
+                  <p class="loadmore" style="font-size: 1rem;"><a href="javascript:scroll(0,0)">点我返回顶部</a></p>
+            </div>
+            <!-- 精品游戏 -->
+            <div class="gamelist tab_cont" style="display:none;">
+                 <div class="item">
+                        <a class="part1 icon" href="https://bakmry.gziasti.com/app/register.php?site_id=1051&topId=243913">
+                            <img class="lazy" src="./模拟器_files/68578ec7eae27.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://bakmry.gziasti.com/app/register.php?site_id=1051&topId=243913">
+                            <h3 class="titles">TOP1娱乐新用户电子大水</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://bakmry.gziasti.com/app/register.php?site_id=1051&topId=243913" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://tz.wx-nsltxf14.com/app/register.php?site_id=114615250&topId=64390">
+                            <img class="lazy" src="./模拟器_files/685691b257916.jpg">
+                        </a>
+                        <a class="part2 text" href="https://tz.wx-nsltxf14.com/app/register.php?site_id=114615250&topId=64390">
+                            <h3 class="titles">uu国际100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://tz.wx-nsltxf14.com/app/register.php?site_id=114615250&topId=64390" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://kiewni.gziasti.com/app/register.php?site_id=800&topId=10325991">
+                            <img class="lazy" src="./模拟器_files/6856bba1cd193.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://kiewni.gziasti.com/app/register.php?site_id=800&topId=10325991">
+                            <h3 class="titles">壹号娱乐100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://kiewni.gziasti.com/app/register.php?site_id=800&topId=10325991" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://bakmry.gziasti.com/app/register.php?site_id=1050&topId=368262&selfPlanId=276232">
+                            <img class="lazy" src="./模拟器_files/6833a8eb76a05.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://bakmry.gziasti.com/app/register.php?site_id=1050&topId=368262&selfPlanId=276232">
+                            <h3 class="titles">南宫旗下非凡娱乐100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水新用户送88</span>
+                            </h3>
+                        </a>
+                        <a href="https://bakmry.gziasti.com/app/register.php?site_id=1050&topId=368262&selfPlanId=276232" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://pkajim.hfjcl.com/app/register.php?site_id=1031&topId=34130">
+                            <img class="lazy" src="./模拟器_files/6830efef45f4b.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://pkajim.hfjcl.com/app/register.php?site_id=1031&topId=34130">
+                            <h3 class="titles">南宫旗下征途国际100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水注册送88 新用户100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://pkajim.hfjcl.com/app/register.php?site_id=1031&topId=34130" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://kiewni.gziasti.com/app/register.php?site_id=1030&topId=51722">
+                            <img class="lazy" src="./模拟器_files/684dfabf1ab36.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://kiewni.gziasti.com/app/register.php?site_id=1030&topId=51722">
+                            <h3 class="titles">巅峰国际100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水注册送88100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://kiewni.gziasti.com/app/register.php?site_id=1030&topId=51722" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://pkajim.hfjcl.com/app/register.php?site_id=1032&topId=24462">
+                            <img class="lazy" src="./模拟器_files/6856bbd2b1b96.png">
+                        </a>
+                        <a class="part2 text" href="https://pkajim.hfjcl.com/app/register.php?site_id=1032&topId=24462">
+                            <h3 class="titles">超凡娱乐100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户首选电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://pkajim.hfjcl.com/app/register.php?site_id=1032&topId=24462" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://156.234.1.137:55003/#/link?allwin=cpsgj9DPdQOvzC%2FkouT92A%3D%3D">
+                            <img class="lazy" src="./模拟器_files/671e44df4fb15.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://156.234.1.137:55003/#/link?allwin=cpsgj9DPdQOvzC%2FkouT92A%3D%3D">
+                            <h3 class="titles">28圈注册送28</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户注册送28电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://156.234.1.137:55003/#/link?allwin=cpsgj9DPdQOvzC%2FkouT92A%3D%3D" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://tz.wx-gujdtq3.com/app/register.php?site_id=2228&topId=974127">
+                            <img class="lazy" src="./模拟器_files/671e44c1d502d.jpg">
+                        </a>
+                        <a class="part2 text" href="https://tz.wx-gujdtq3.com/app/register.php?site_id=2228&topId=974127">
+                            <h3 class="titles">大满贯100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://tz.wx-gujdtq3.com/app/register.php?site_id=2228&topId=974127" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://onkrcy.hefaship.com/app/register.php?site_id=1020&topId=24428527">
+                            <img class="lazy" src="./模拟器_files/684dfa6cd1ea8.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://onkrcy.hefaship.com/app/register.php?site_id=1020&topId=24428527">
+                            <h3 class="titles">问鼎娱乐100+1000</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://onkrcy.hefaship.com/app/register.php?site_id=1020&topId=24428527" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1021&topId=4927847">
+                            <img class="lazy" src="./模拟器_files/671e446ed3541.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1021&topId=4927847">
+                            <h3 class="titles">多多娱乐100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1021&topId=4927847" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://nvjmce.hfjcl.com/app/register.php?site_id=1019&topId=8069838">
+                            <img class="lazy" src="./模拟器_files/684dfa7e84d3e.jpeg">
+                        </a>
+                        <a class="part2 text" href="https://nvjmce.hfjcl.com/app/register.php?site_id=1019&topId=8069838">
+                            <h3 class="titles">NG体育100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户首选电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://nvjmce.hfjcl.com/app/register.php?site_id=1019&topId=8069838" class="button1 small3">下载</a>
+                    </div><div class="item">
+
+                        <a class="part1 icon" href="https://xjvueb.hefaship.com/app/register.php?site_id=1010&topId=3113400">
+                            <img class="lazy" src="./模拟器_files/671e442302d0c.jpg">
+                        </a>
+                        <a class="part2 text" href="https://xjvueb.hefaship.com/app/register.php?site_id=1010&topId=3113400">
+                            <h3 class="titles">赏金国家全新升级100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://xjvueb.hefaship.com/app/register.php?site_id=1010&topId=3113400" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="http://yhyl.xyz/">
+                            <img class="lazy" src="./模拟器_files/671e437119bbc.jpeg">
+                        </a>
+                        <a class="part2 text" href="http://yhyl.xyz/">
+                            <h3 class="titles">PG电子模拟器</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt"></span>
+                            </h3>
+                        </a>
+                        <a href="http://yhyl.xyz/" class="button1 small3">下载</a>
+                    </div><div class="item">
+                        <a class="part1 icon" href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1012&topId=2671794">
+                            <img class="lazy" src="./模拟器_files/67a9339b56687.png">
+                        </a>
+                        <a class="part2 text" href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1012&topId=2671794">
+                            <h3 class="titles">旺财28100+100</h3>
+                            <h3 class="title">
+                                <span class="tag-hot">199999次下载</span>
+                                <span class="tag-coupon-sd">安卓/IOS</span>
+                            </h3>
+                            <h3 class="title">
+                                <span class="tag-coupon-xbt">新用户首选电子大水100+100</span>
+                            </h3>
+                        </a>
+                        <a href="https://wlkyiy.paradisemall.net/app/register.php?site_id=1012&topId=2671794" class="button1 small3">下载</a>
+                    </div>                <!-- 点我返回顶部链接 -->
+                <p class="loadmore" style="font-size: 1rem;"><a href="javascript:scroll(0,0)">点我返回顶部</a></p>
+            </div>
+
+
+            <!-- 公告 -->
+            <p class="loadmore" style="font-size: 1rem;padding: 0 0;">推荐平台账单无忧 百万秒下</p>
+        </div>
+    </div>
+
+    <!-- 引入slidesjs插件 -->
+    <script src="./模拟器_files/jquery.slides.min.js.下载"></script>
+    <script type="text/javascript">
+        var lineindex = parseInt("0")
+        console.log(lineindex)
+        $("#tab").find("li").removeClass("active");
+        $("#tab li").eq(lineindex).addClass("active");
+        $(".tab_cont").eq(lineindex).show().siblings(".tab_cont").hide();
+
+        $("#search-newbtn").on("click", function () {
+            var keyword = $("#search-newinp").val();
+            if (keyword == "") {
+                location.href = "?keyword=" + keyword + "&lineindex=" + lineindex;
+                return
+            }
+            location.href = "?keyword=" + keyword + "&lineindex=" + lineindex;
+        })
+
+        $('#slides').slidesjs({
+            width: 640,
+            height: 250,
+            pagination: { active: false, effect: "slide" },
+            play: { active: false, auto: true, interval: 3000, swap: false },
+            navigation: { active: false }
+        });
+
+        $(document).ready(function () {
+            $("#tab li").click(function () {
+                var liindex = $("#tab li").index(this);
+                lineindex = liindex
+                $("#tab").find("li").removeClass("active");
+                $(this).addClass("active");
+                $(".tab_cont").eq(liindex).show().siblings(".tab_cont").hide();
+            });
+        });
+
+        function login() {
+            if (getCookie('channel_identity') == 'uc') {
+                window.location = '/user/uc_login?back_url=' + encodeURIComponent(window.location.href);
+            } else {
+                layer.open({
+                    type: 1,
+                    content: $('#account-login'),
+                    skin: 'loginbox',
+                    closeBtn: 1,
+                    shade: 0.8,
+                    title: false
+                });
+            }
+        }
+
+        $(function () {
+            $("img.lazy").lazyload({ effect: "fadeIn" });
+            $(".nav li").click(function () {
+                $('body,html').animate({
+                    scrollTop: $(window).scrollTop() + 1
+                }, 0);
+                $('body,html').animate({
+                    scrollTop: $(window).scrollTop() - 1
+                }, 0);
+            })
+        });
+
+        function closeService() {
+            document.querySelector('.sideBar').style.display = 'none';
+        }
+    </script>
+
+
+</body><editor-card style="position:absolute;top:0px;left:0px;z-index:auto;display: block !important"><div dir="auto" style="all: initial;"><div style="color-scheme: initial; forced-color-adjust: initial; mask: initial; math-depth: initial; position: absolute; position-anchor: initial; text-size-adjust: initial; appearance: initial; color: initial; font: initial; font-palette: initial; font-synthesis: initial; position-area: initial; text-orientation: initial; text-rendering: initial; text-spacing-trim: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; anchor-name: initial; anchor-scope: initial; animation-composition: initial; animation: initial; app-region: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-decoration-break: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-animation: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; corner-shape: initial; corner-block-end-shape: initial; corner-block-start-shape: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; dynamic-range-limit: initial; empty-cells: initial; field-sizing: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; interpolate-size: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask-type: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-block: initial; overflow-clip-margin: initial; overflow-inline: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position-try: initial; position-visibility: initial; print-color-adjust: initial; quotes: initial; r: initial; reading-flow: initial; reading-order: initial; resize: initial; rotate: initial; ruby-align: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-initial-target: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-marker-group: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-target-group: initial; scroll-timeline: initial; scrollbar-color: initial; scrollbar-gutter: initial; scrollbar-width: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-autospace: initial; text-box: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; text-wrap: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-class: initial; view-transition-group: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; white-space-collapse: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://hokifickgkhplphjiodbggjmoafhignh/fonts/fabric-icons.css"><div style="all: initial;"><template shadowrootmode="open"></template></div></div><div style="color-scheme: initial; forced-color-adjust: initial; mask: initial; math-depth: initial; position: absolute; position-anchor: initial; text-size-adjust: initial; appearance: initial; color: initial; font: initial; font-palette: initial; font-synthesis: initial; position-area: initial; text-orientation: initial; text-rendering: initial; text-spacing-trim: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; anchor-name: initial; anchor-scope: initial; animation-composition: initial; animation: initial; app-region: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-decoration-break: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-animation: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; corner-shape: initial; corner-block-end-shape: initial; corner-block-start-shape: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; dynamic-range-limit: initial; empty-cells: initial; field-sizing: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; interpolate-size: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask-type: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-block: initial; overflow-clip-margin: initial; overflow-inline: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position-try: initial; position-visibility: initial; print-color-adjust: initial; quotes: initial; r: initial; reading-flow: initial; reading-order: initial; resize: initial; rotate: initial; ruby-align: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-initial-target: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-marker-group: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-target-group: initial; scroll-timeline: initial; scrollbar-color: initial; scrollbar-gutter: initial; scrollbar-width: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-autospace: initial; text-box: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; text-wrap: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-class: initial; view-transition-group: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; white-space-collapse: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://hokifickgkhplphjiodbggjmoafhignh/fonts/fabric-icons.css"></div></div></editor-card></html>
